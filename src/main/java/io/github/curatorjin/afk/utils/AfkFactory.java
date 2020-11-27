@@ -7,7 +7,7 @@ import io.github.curatorjin.afk.mouse.AfkMouse;
 import io.github.curatorjin.afk.mouse.impl.FakeMouse;
 import io.github.curatorjin.afk.mouse.impl.RealMouse;
 import io.github.curatorjin.afk.tasks.AfkTask;
-import io.github.curatorjin.utils.ClassUtil;
+import io.github.curatorjin.utils.PackageScanner;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -36,7 +36,7 @@ public final class AfkFactory {
     }
 
     public static boolean init() {
-        ArrayList<Class<?>> interfaceImpls = ClassUtil.getInterfaceImpls(AfkTask.class);
+        ArrayList<Class<?>> interfaceImpls = PackageScanner.getInterfaceImpls(AfkTask.class);
         List<AfkTask> afkTasks = new LinkedList<>();
         for (Class<?> c : interfaceImpls) {
             try {
