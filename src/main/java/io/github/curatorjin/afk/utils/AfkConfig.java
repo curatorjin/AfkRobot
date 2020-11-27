@@ -34,6 +34,10 @@ public final class AfkConfig {
         withLog.set(logConfig);
     }
 
+    protected static void setOperate(boolean operateConfig) {
+        operate.set(operateConfig);
+    }
+
     protected static void setTaskName(String targetTaskName) {
         taskName = targetTaskName;
     }

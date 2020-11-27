@@ -9,12 +9,14 @@ public final class AfkArgsParser {
         Options options = new Options();
         options.addOption("h", "help", false, "Print this usage information");
         options.addOption("l", "log", true, "log configuration");
+        options.addOption("o", "operate", true, "is operate");
         options.addOption("t", "task", true, "task name");
         options.addOption("T", "timeout", true, "timeout");
 
         try {
             CommandLine commandLine = parser.parse(options, args);
             AfkConfig.setLogging(commandLine.hasOption('l'));
+            AfkConfig.setOperate(commandLine.hasOption('o'));
             if (!commandLine.hasOption('t')) {
                 System.out.println("请输入任务名");
                 return false;

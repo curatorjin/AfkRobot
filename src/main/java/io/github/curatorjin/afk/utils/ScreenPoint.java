@@ -10,17 +10,17 @@ public class ScreenPoint {
     /**
      * X坐标
      */
-    private int x;
+    private final int x;
 
     /**
      * Y坐标
      */
-    private int y;
+    private final int y;
 
     /**
      * 坐标点的颜色
      */
-    private int color;
+    private final int color;
 
     public ScreenPoint(int x, int y, int color) {
         this.x = x;
@@ -28,4 +28,15 @@ public class ScreenPoint {
         this.color = color;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getColor() {
+        return color;
+    }
 }

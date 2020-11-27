@@ -76,7 +76,7 @@ public class MouseInfo extends JFrame {
                     Point point = java.awt.MouseInfo.getPointerInfo().getLocation();
                     info_frame.value_x.setText("" + point.x);
                     info_frame.value_y.setText("" + point.y);
-                    info_frame.value_rgb.setText("" + RealMouse.getPointRGB(point.x, point.y));
+                    info_frame.value_rgb.setText("" + ScreenUtil.getPointRGB(point.x, point.y));
                 }
             }, 100, 100);
         } catch (Exception e) {

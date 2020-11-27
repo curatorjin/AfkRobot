@@ -16,10 +16,6 @@ public class RealMouse implements AfkMouse {
         }
     }
 
-    public static int getPointRGB(int x, int y) {
-        return robot.getPixelColor(x, y).getRGB();
-    }
-
     public void leftClick(int x, int y) {
         robot.mouseMove(x, y);
         robot.delay(100);
