@@ -18,7 +18,7 @@ public class RealMouse implements AfkMouse {
 
     public void leftClick(int x, int y) {
         robot.mouseMove(x, y);
-        robot.delay(100);
+        robot.delay(200);
         robot.mousePress(InputEvent.BUTTON1_MASK);
         robot.delay(10);
         robot.mouseRelease(InputEvent.BUTTON1_MASK);
@@ -26,7 +26,7 @@ public class RealMouse implements AfkMouse {
 
     public void rightClick(int x, int y) {
         robot.mouseMove(x, y);
-        robot.delay(100);
+        robot.delay(200);
         robot.mousePress(InputEvent.BUTTON3_MASK);
         robot.delay(10);
         robot.mouseRelease(InputEvent.BUTTON3_MASK);
